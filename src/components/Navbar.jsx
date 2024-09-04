@@ -1,13 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <nav
       className="p-4"
@@ -18,11 +12,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-black text-lg font-bold">VPS Furniture</div>
         <div className="block lg:hidden"></div>
-        <ul
-          className={`${
-            isOpen ? "block" : "hidden"
-          } lg:flex lg:space-x-4 lg:items-center`}
-        >
+        <ul>
           <li>
             <Link to="/" className="text-black font-bold hover:text-sky-800">
               Home
