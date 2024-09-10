@@ -55,9 +55,9 @@ const Office = () => {
               <h2 className="text-xl font-semibold mb-2">
                 Office Item {index + 1}
               </h2>
-              <p className="text-gray-600">
+              {/* <p className="text-gray-600">
                 Description of the Office item goes here.
-              </p>
+              </p> */}
             </div>
           </div>
         ))}

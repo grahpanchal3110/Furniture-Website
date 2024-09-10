@@ -9,6 +9,10 @@ const DesignConsultationForm = () => {
 
   return (
     <div className="bg-white rounded-lg shadow-md max-w-md mx-auto my-8 p-6">
+      <div
+        className="bg-cover bg-center h-48 rounded-t-lg"
+        style={{ backgroundImage: `url('/path-to-your-image.jpg')` }}
+      ></div>
       <h2 className="text-2xl font-bold text-center mt-4">
         Get a free design consultation
       </h2>
