@@ -529,19 +529,54 @@ const clients = [
   { name: "Hafele", imgSrc: Hafele },
 ];
 
+// const settings = {
+//   dots: true,
+//   infinite: true,
+//   speed: 500,
+//   slidesToShow: 4,
+//   slidesToScroll: 1,
+//   autoplay: true,
+//   autoplaySpeed: 2000, // 2 seconds
+//   appendDots: (dots) => (
+//     <div style={{ bottom: "-50px" }}>
+//       <ul style={{ margin: "0px" }}> {dots} </ul>
+//     </div>
+//   ),
+// };
+
 const settings = {
   dots: true,
   infinite: true,
   speed: 500,
-  slidesToShow: 4,
+  slidesToShow: 4, // Default number of slides for larger screens
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 2000, // 2 seconds
+  autoplaySpeed: 2000,
   appendDots: (dots) => (
     <div style={{ bottom: "-50px" }}>
       <ul style={{ margin: "0px" }}> {dots} </ul>
     </div>
   ),
+  responsive: [
+    {
+      breakpoint: 1024, // For devices with width less than 1024px
+      settings: {
+        slidesToShow: 3, // Show 3 slides for tablets
+      },
+    },
+    {
+      breakpoint: 768, // For devices with width less than 768px
+      settings: {
+        slidesToShow: 2, // Show 2 slides for small tablets
+      },
+    },
+    {
+      breakpoint: 480, // For devices with width less than 480px
+      settings: {
+        slidesToShow: 1, // Show 1 slide for mobile devices
+      },
+    },
+  ],
 };
 
 const services = [
@@ -713,14 +748,11 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto py-12 px-4">
+
+      {/* <div className="max-w-7xl mx-auto py-12 px-4">
         <h2 className="text-4xl font-bold text-center">
           Why Choose GLORY AGE in Ahmedabad?
         </h2>
-        {/* <p className="text-center mt-4 text-gray-600">
-          Here are some of the reasons our clients say they continue to work
-          with us.
-        </p> */}
 
         <Slider {...settings} className="mt-8 mb-4">
           {services.map((service, index) => (
@@ -753,6 +785,54 @@ const Home = () => {
                 src={client.imgSrc}
                 alt={client.name}
                 className="mx-auto h-24 object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      </div> */}
+
+      <div className="max-w-7xl mx-auto py-12 px-4">
+        <h2 className="text-4xl font-bold text-center text-gray-900 sm:text-3xl">
+          Why Choose GLORY AGE in Ahmedabad?
+        </h2>
+
+        <Slider {...settings} className="mt-8 mb-4">
+          {services.map((service, index) => (
+            <div key={index} className="p-4">
+              <div className="bg-white shadow-lg rounded-lg p-6">
+                <h3 className="font-bold text-xl mb-4 text-gray-800 sm:text-lg">
+                  {service.title}
+                </h3>
+                <p className="text-gray-700 text-sm sm:text-base">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      <div className="max-w-7xl mx-auto py-12 px-4 text-center">
+        <h2 className="text-4xl font-bold mb-6 text-gray-900 sm:text-3xl">
+          We partner with the Best Brands to offer Superior Solutions
+        </h2>
+
+        <div
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"
+          style={{
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
+          {clients.map((client, index) => (
+            <div
+              key={index}
+              className="border border-gray-300 shadow-md rounded-lg p-4 hover:shadow-lg transition-shadow duration-300"
+            >
+              <img
+                src={client.imgSrc}
+                alt={client.name}
+                className="mx-auto h-20 w-full object-contain sm:h-16 md:h-24"
               />
             </div>
           ))}
