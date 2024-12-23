@@ -715,7 +715,7 @@ const Home = () => {
       </div>
       <div className="max-w-7xl mx-auto py-12 px-4">
         <h2 className="text-4xl font-bold text-center">
-          Why Choose VSP furniture in Ahmedabad?
+          Why Choose GLORY AGE in Ahmedabad?
         </h2>
         {/* <p className="text-center mt-4 text-gray-600">
           Here are some of the reasons our clients say they continue to work
@@ -770,13 +770,12 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-3">
             <div>
               <h5 className="text-xl font-semibold mb-4 text-black">
-                About VSP Furniture
+                About GLORY AGE
               </h5>
               <p className="text-sm">
-                VSP Furniture offers a wide range of high-quality furniture
-                designed to bring elegance and comfort to your home or office.
-                Our collections are crafted to suit various styles and
-                preferences.
+                GLORY AGE offers a wide range of high-quality furniture designed
+                to bring elegance and comfort to your home or office. Our
+                collections are crafted to suit various styles and preferences.
               </p>
             </div>
             <div>
@@ -851,20 +850,25 @@ const Home = () => {
                 Contact Us
               </h5>
               <p>
-                <i className="fas fa-phone-alt"></i> +123 456 7890
+                <i className="fas fa-phone-alt"></i>{" "}
+                <span className="font-bold">Parth Panchal - </span>+91
+                8780320604 ,
+                <br />
+                <span className="font-bold">Kartik Panchal - </span>
+                +91 9313104895
               </p>
+              {/* <p>
+                <i className="fas fa-envelope"></i> 
+              </p> */}
               <p>
-                <i className="fas fa-envelope"></i> info@vspfurniture.com
-              </p>
-              <p>
-                <i className="fas fa-map-marker-alt"></i> 37 - Vrundavan Society
-                Near Vishwkarma Mandir - Chandlodiya - 382481, Ahmedabad, India
+                <i className="fas fa-map-marker-alt"></i> 301, Simandhar Avenue,
+                Science City, Ahmedabad - 380060, Gujarat (India)
               </p>
             </div>
           </div>
 
           <div className="text-center pt-2 border-t font-semibold border-gray-700 mt-2">
-            <p>© 2024 VSP Furniture. All rights reserved.</p>
+            <p>© 2024 GLORY AGE. All rights reserved.</p>
           </div>
         </div>
       </div>

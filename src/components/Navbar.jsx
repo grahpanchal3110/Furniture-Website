@@ -100,7 +100,9 @@ const Navbar = () => {
       }}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-black text-lg font-bold">VPS Furniture</div>
+        <div className="text-black text-lg font-bold">
+          GLORY AGE CONSULTANCY
+        </div>
         <div className="block lg:hidden">
           <button className="text-black font-bold" onClick={handleMenuToggle}>
             {isOpen ? "✖" : "☰"}
